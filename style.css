@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background-color: lightblue;
+}
+
+.parent {
+  display:flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  
+}
+
+.parent div {
+  width: calc((100% / 4) - 25px);
+  height: auto;
+  margin: 5px;
+  
+}
+
+/* Desktop rašosi nuo didžiausio iki mažiausio ekrano pločio,
+ mobiliam atvirkščiai - nuo mažiausio iki didžiausio. */
+
+/* Pradžia nuo desktopo: */
+@media all and (max-width: 1024px) {
+  body {
+    background-color: lightyellow;
+  }
+
+  h1 {
+    color: coral;
+  }
+  .parent {
+    width: 85%;
+  }
+  .parent div {
+    width: calc((100% / 3) - 25px);
+  }
+}
+
+@media all and (max-width: 760px) {
+  body {
+    background-color: coral;
+  }
+
+  h1 {
+    color: violet;
+  }
+
+  .parent {
+    width: 100%;
+  }
+  .parent div {
+    width: calc((100% / 2) - 25px);
+  }
+}
+
+@media all and (max-width: 480px) {
+  body {
+    background-color: rgb(18, 112, 175);
+  }
+
+  h1 {
+    color: violet;
+  }
+
+  .parent {
+    width: 100%;
+  }
+  .parent div {
+    width: 100%;
+  }
+}
