@@ -4,14 +4,14 @@ body {
 }
 
 .parent {
-  display:flex;
-  flex-wrap: wrap;
+  
   width: 80%;
   margin: auto;
   
 }
 
 .parent div {
+  display: inline-block;
   width: calc((100% / 4) - 25px);
   height: auto;
   margin: 5px;
